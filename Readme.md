@@ -1,1 +1,1 @@
-Projeto final Gama Acdemy CriptoDev 1.2 TeamSix
+Projeto final Gama Academy CriptoDev 1.2 TeamSix
