@@ -153,8 +153,7 @@ iframe, object, embed{max-width: 100%;}
   }
   /* team members */
   .team-members {
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
   }
 
 .member {
