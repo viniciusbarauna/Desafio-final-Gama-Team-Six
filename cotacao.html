@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cotações</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <header class="teste">
+    <img src="assets/cripto-overview-2.png" width="150" />
+  </header>
+  <body>
+    <div class="cotacoes">
+      <h1>Cotações</h1>
+      <nav class="moedas1">
+        <button class="btncoin" onclick="viewBTC()">BITCOIN</button>
+        <button class="btncoin" onclick="viewETH()">ETHEREUM</button>
+        <button class="btncoin" onclick="viewUSDT()">THETER</button>
+      </nav>
+      <h2 id="title"></h2>
+      <h5 id="date">Data: <span id="thisdate"></span></h5>
+      <p id="value">
+        Valor Máximo: <span id="maxvalue"></span><br />
+        Valor Mínimo: <span id="minvalue"></span>
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

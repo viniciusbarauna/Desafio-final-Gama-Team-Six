@@ -31,13 +31,13 @@
         width="150"
       />
       <ul>
-        <li><a class="nav-bar" href="#">Home</a></li>
-        <li><a class="nav-bar" href="#">Moedas</a></li>
-        <li><a class="nav-bar" href="#">Contato</a></li>
-        <li><a class="nav-bar" href="#">Localização</a></li>
+        <li><a class="nav-bar" href="#carousel">Home</a></li>
+        <li><a class="nav-bar" href="#Moedas">Moedas</a></li>
+        <li><a class="nav-bar" href="../Desafio-final-Gama-Team-Six/cotacao.html">cotação</a></li>
+        <li><a class="nav-bar" href="#localização">Localização</a></li>
       </ul>
     </header>
-    <div class="conteiner">
+    <div class="container-carousel" id="carousel">
       <div
         id="carouselExampleControls"
         class="carousel slide"
@@ -45,27 +45,26 @@
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img
+            <img 
               src="assets/Carrousel_assets/Slide Como Funciona Uma transação-1.jpg"
-              class="d-block w-100"
+              class="image-carousel"
               alt="..."
-              height="600"
+
             />
           </div>
           <div class="carousel-item">
             <img
               src="assets/Carrousel_assets/O que é uma Cripto Wallet-1.jpg"
-              class="d-block w-100"
+              class="image-carousel"
               alt="..."
-              height="600"
+
             />
           </div>
           <div class="carousel-item">
             <img
               src="assets/Carrousel_assets/Slide Staking-1.jpg"
-              class="d-block w-100"
+              class="image-carousel"
               alt="..."
-              height="600"
             />
           </div>
         </div>
@@ -94,16 +93,44 @@
         <p>Cripto Moedas</p>
       </h1>
     </div>
-    <div class="container">
-      <section class="flex">
-        <div class="container2">
-          <img
+    <div class="bitcoin">
+      <div class="container">
+        <section class="flex">
+          <div class="container2">
+            <a href="/cotacao.html"></a>
+            <img
             id="bitcoin-float"
             src="assets/Bitcoin Coin.png"
             alt="Bitcoin"
             width="100"
-          />
-        </div>
+           />
+          
+         </div>
+        </section>
+       </div>
+         <div class="flip-cards">
+              <input type="checkbox" id="switch" />
+          <label class="flip-container" for="switch">
+            <div class="flipper">
+              <div class="front">
+               <img class="imagemcard"
+                src="assets/Bitcoin Frente.png"
+                alt=""
+               />
+              </div>
+              <div class="back">
+                <img class="imagemcard"
+                src="assets/Bitcoin Verso.png"
+                alt=""
+                />
+              </div>
+           </div>
+         </label>
+          </div>
+      </div>
+        <div class="ethereum">
+          <div class="container">
+            <section class="flex">
         <div class="container2">
           <img
             src="assets/Ethereum coin.png"
@@ -111,6 +138,31 @@
             width="100"
           />
         </div>
+      </section>
+          </div>
+          <div class="flip-cards">
+            <input type="checkbox" id="switch2" />
+        <label class="flip-container2" for="switch2">
+          <div class="flipper2">
+            <div class="front2">
+              <img class="imagemcard"
+                src="assets/Ethereum Frente.png"
+                alt=""
+              />
+            </div>
+            <div class="back2">
+              <img class="imagemcard"
+                src="assets/Ethereum Verso.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </label>
+          </div>
+  </div>
+        <div class="theter">
+          <div class="container">
+            <section class="flex">
         <div class="container2">
           <img
             src="assets/Theter coin.png"
@@ -119,74 +171,46 @@
           />
         </div>
       </section>
+      </div>
       <div class="flip-cards">
-        <input type="checkbox" id="switch" />
-        <label class="flip-container" for="switch">
-          <div class="flipper">
-            <div class="front">
-              <img
-                src="assets/Bitcoin Frente.png"
-                alt=""
-                width="300"
-              />
-            </div>
-            <div class="back">
-              <img
-                src="assets/Bitcoin Verso.png"
-                alt=""
-                width="300"
-              />
-            </div>
-          </div>
-        </label>
-        <input type="checkbox" id="switch2" />
-        <label class="flip-container2" for="switch2">
-          <div class="flipper2">
-            <div class="front2">
-              <img
-                src="assets/Ethereum Frente.png"
-                alt=""
-                width="300"
-              />
-            </div>
-            <div class="back2">
-              <img
-                src="assets/Ethereum Verso.png"
-                alt=""
-                width="300"
-              />
-            </div>
-          </div>
-        </label>
         <input type="checkbox" id="switch3" />
         <label class="flip-container3" for="switch3">
           <div class="flipper3">
             <div class="front3">
-              <img
+              <img class="imagemcard"
                 src="assets/Theter Frente.png"
                 alt=""
-                width="300"
               />
             </div>
             <div class="back3">
-              <img
+              <img class="imagemcard"
                 src="assets/Theter Verso.png"
                 alt=""
-                width="300"
               />
             </div>
           </div>
         </label>
       </div>
-      </div>
     </div>
 
-    <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <div class="cotacoes">
+      <h1>Cotações</h1>
+      <nav class="moedas1">
+        <button class="btncoin" onclick="viewBTC()">BITCOIN</button>
+        <button class="btncoin" onclick="viewETH()">ETHEREUM</button>
+        <button class="btncoin" onclick="viewUSDT()">THETER</button>
+      </nav>
+      <h2 id="title"></h2>
+      <h5 id="date">Data: <span id="thisdate"></span></h5>
+      <p id="value">
+        Valor Máximo: <span id="maxvalue"></span><br />
+        Valor Mínimo: <span id="minvalue"></span>
+      </p>
+    </div>
+    <script src="script.js"></script>
 
-
-    
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Localização</h1>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="localização">
+        <h1>Localização</h1>
         <p class="lead">
            
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0289151432603!2d-46.68668318558539!3d-23.56740496769942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57499b4eaaab%3A0xb742db44a55ce752!2sGama%20Academy!5e0!3m2!1spt-BR!2sbr!4v1654953320938!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -292,9 +316,47 @@
 			
 			
 	</section>
+  <footer>
+		<div class="main-content">
+			<div class="left box">
+				<h2> Sobre nós</h2>
+				<div class="content">
+					<p>Somos uma empresa empenhada em espalhar conhecimento dobre tecnologia no mundo, assim como a observação das cripto moedas.</p>
+				
+					<div class="social">
+						<a href="#"><span class="fab fa-facebook-f"></span></a>
+						<a href="#"><span class="fab fa-twitter"></span></a>
+						<a href="#"><span class="fab fa-instagram"></span></a>
+						<a href="#"><span class="fab fa-youtube"></span></a>
+					</div>
+				</div>
+			</div>
+			<div class="center box">
+				<h2>Endereço</h2>
+				<div class="content">
+					<div class="place">
+						<span class="fas fa-map-marker"></span>
+						<span class="text">R. Cap. Antônio Rosa, 376 - Pinheiros/São Paulo</span>
+					</div>
 
+					<div class="phone" id="phone">
+						<span class="fas fas fa-phone-alt"></span>
+						<span class="text">+55 61 9999-9999</span>
+					</div>
 
-
-
+					<div class="email">
+						<span class="fas fa-envelope"></span>
+						<span class="text">exemplo@exemplo.com</span>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="bottom">
+			<div class="center">
+				<span class="credit">Criado por <a href="#">Grupo 6</a></span>
+				<span class="far fa-copyright">2021 Todos os diteitos reservados</span>
+			</div>
+		</div>
+    </footer>
   </body>
 </html>
